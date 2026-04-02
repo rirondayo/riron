@@ -32,6 +32,7 @@
             margin: 0 auto;
         }
 
+        /* ネオンタイトル */
         h1 {
             font-size: 2.8rem;
             text-align: center;
@@ -69,6 +70,7 @@
             transform: translateY(-5px);
         }
 
+        /* イベント概要リスト */
         ul.event-list {
             list-style: none;
         }
@@ -81,6 +83,7 @@
             border-bottom: none;
         }
 
+        /* ネオンボタン */
         .button {
             display: inline-block;
             background: transparent;
@@ -105,6 +108,7 @@
             transform: scale(1.03);
         }
 
+        /* 動画コンテナ */
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
@@ -141,6 +145,7 @@
             font-size: 0.95em;
         }
 
+        /* 軽いアニメーション */
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -149,7 +154,11 @@
             animation: fadeInUp 0.8s ease forwards;
         }
 
-        /* レスポンシブ対応 */
+        /* ======================
+           レスポンシブ対応（Media Queries）
+           ====================== */
+
+        /* タブレット・小さいデスクトップ */
         @media (min-width: 768px) {
             body { padding: 40px 20px; }
             h1 { font-size: 3.2rem; }
@@ -158,11 +167,13 @@
             .button { width: auto; display: inline-block; }
         }
 
+        /* 大きな画面 */
         @media (min-width: 1024px) {
             .container { max-width: 950px; }
             h1 { font-size: 3.5rem; letter-spacing: 5px; }
         }
 
+        /* スマホ（狭い画面）用調整 */
         @media (max-width: 480px) {
             h1 { font-size: 2.2rem; letter-spacing: 2px; }
             h2 { font-size: 1.6rem; }
@@ -176,17 +187,18 @@
     <div class="container">
         <h1>りぃーろんの事業所向け<br>eスポーツカスタム</h1>
 
-        <!-- 動機・理念（新しい文章に変更） -->
+        <!-- 動機・理念 -->
         <section>
             <h2>このカスタムを始めた動機・理念</h2>
-            <p>初めまして、りぃーろんといいます。私自身発達障害（ADHD）のある当事者です。全国のeスポーツ系のB型事業所等と連携し、Apexカスタムを開かせていただいています。</p>
-            <p>この活動は完全に私個人による活動です。</p>
-            
+            <p>初めまして、りぃーろんといいます。私自身発達障害（ADHD）のある当事者です。eスポーツ、特にApex Legendsが大好きです。</p>
+            <p>全国のeスポーツ系のB型事業所、その他福祉事業所と連携し、事業所のカスタムを開かせていただいています。</p>
+            <p>この活動は完全に私個人による活動であり、何らかの福祉事業所や団体やNPO法人ではありません。</p>
+            <p>私自身がなぜこのような活動をしようと考えたかというと、私自身含め活躍の場を作りたかったからです。</p>
+            <p>障がいや特性、病気を持っていても人は平等です。とは私は思いません。社会には確実に格差があり、健常者でも生きづらい世の中だと思います。せっかく能力や才能を持っているのにそれを発揮できるチャンスがない時があります。それはとてもとても悔しく、もったいないことだと思います。</p>
             <p>私の大会に参加していただいている方々は毎日eスポーツに励んでいると思います。しかしその力や可能性を発揮できる場所が中々ありません。私の大会ではみなさんの日々磨いている能力を存分に発揮していただけるような場を作りたいです。</p>
-            
-            <p>それは私一人では実現できません。なぜなら、みなさんが参加しなければ大会が成り立たないからです。一人ひとりが大会に参加することで活躍の場が形成されお互いを助けることにつながっています。これは当事者同士による自助だといえます。</p>
-            
-            <p>福祉や制度に頼ることも大切ですが、自分たちで行動して社会に自分たちの可能性を訴えていく必要があると思います。</p>
+            <p>それは私一人では実現できません。なぜなら、みなさんが参加しなければ大会が成り立たないからです。みなさん一人ひとりが大会に参加することで活躍の場が形成され人を助けることにつながっています。これは当事者同士による自助だといえます。</p>
+            <p>福祉や制度に頼ることも大切ですが、自分たちで行動して活躍の場を作っていくことも必要だと考えています。</p>
+            <p class="highlight"><strong>「あなたは助けられているだけじゃない、大会に参加することで他の参加者を助けているんです。」</strong></p>
         </section>
 
         <!-- イベント概要 -->
@@ -207,22 +219,12 @@
             <h2>イベントの様子</h2>
             <h3 style="color:#67e8f9; margin:20px 0 15px;">動画1</h3>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/SCjJF2THxJc" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/SCjJF2THxJc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
             <h3 style="color:#67e8f9; margin:30px 0 15px;">動画2</h3>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/en1vU2zJuq8" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/en1vU2zJuq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </section>
 
