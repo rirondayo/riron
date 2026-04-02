@@ -8,7 +8,7 @@
         body {
             font-family: "Helvetica Neue", Arial, sans-serif;
             margin: 40px auto;
-            max-width: 800px;
+            max-width: 850px;
             line-height: 1.8;
             color: #333;
         }
@@ -26,18 +26,30 @@
         section {
             margin-bottom: 50px;
         }
-        ul {
-            padding-left: 20px;
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9のアスペクト比 */
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
         a {
             color: #2563eb;
-            text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
         .placeholder {
-            color: #444;
+            color: #666;
             font-style: italic;
         }
     </style>
@@ -49,31 +61,42 @@
     <!-- 動機・理念 -->
     <section>
         <h2>このカスタムを始めた動機・理念</h2>
-        <p class="placeholder">
-            （ここに文章を後で書いてください）<br>
-            例：全国のB型事業所で働く皆さんに、Apex Legendsを通して楽しみや達成感を提供したいと思い、この活動を始めました。
-        </p>
+        <p class="placeholder">（ここに文章を後で書いてください）</p>
     </section>
 
     <!-- イベント概要 -->
     <section>
         <h2>イベント概要</h2>
-        <p class="placeholder">
-            （ここにイベントの詳細を後で書いてください）<br>
-            例：・対象：全国のB型事業所利用者およびスタッフ<br>
-            ・使用ゲーム：Apex Legends<br>
-            ・形式：カスタムマッチ<br>
-            ・所要時間：約2時間 など
-        </p>
+        <p class="placeholder">（ここにイベントの詳細を後で書いてください）</p>
     </section>
 
-    <!-- イベントの様子 -->
+    <!-- イベントの様子（YouTube埋め込み） -->
     <section>
         <h2>イベントの様子</h2>
-        <p>実際のイベントの動画や写真をここに掲載します。</p>
+        
+        <h3>第７回Apex事業所カスタムの様子</h3>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/SCjJF2THxJc" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen></iframe>
+        </div>
+
+        <h3>第６回Apex事業所カスタムの様子</h3>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/en1vU2zJuq8" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen></iframe>
+        </div>
+
         <p class="placeholder">
-            例：<a href="https://youtu.be/SCjJF2THxJc" target="_blank">第７回Apex事業所カスタムの様子</a><br>
-            例：<a href="https://youtu.be/SCjJF2THxJc" target="_blank">第６回Apex事業所カスタムの様子</a>
+            ※新しい動画を追加したい場合は、<br>
+            「動画3」として同じ形式でコピーして追加してください。
         </p>
     </section>
 
@@ -95,26 +118,19 @@
                 </a>
             </li>
         </ol>
-        <p>※フォーム送信後、事業所担当者様に確認のご連絡をいたします。</p>
     </section>
 
     <!-- 応援・スポンサー募集 -->
     <section>
         <h2>スポンサー・クラウドファンディング・応援してくれる方募集</h2>
-        <p>
-            この活動を継続・拡大していくために、ご支援いただける方を募集しています。<br>
-            企業様、個人様、どちらも大歓迎です！
-        </p>
-        <p>
-            ご興味のある方はお気軽に<br>
-            <a href="https://x.com/apeXRiron" target="_blank">X（@apeXRiron）</a> までご連絡ください。
-        </p>
+        <p>この活動を継続・拡大していくために、ご支援いただける方を募集しています。</p>
+        <p>ご興味のある方はお気軽に <a href="https://x.com/apeXRiron" target="_blank">X（@apeXRiron）</a> までご連絡ください。</p>
     </section>
 
     <hr>
     <footer style="text-align: center; margin-top: 60px; color: #666; font-size: 0.9em;">
         <p>りぃーろん @apex</p>
-        <p><a href="https://x.com/apeXRiron" target="_blank">X（Twitter）</a> | GitHub Pages</p>
+        <p><a href="https://x.com/apeXRiron" target="_blank">X（Twitter）</a></p>
     </footer>
 
 </body>
