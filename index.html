@@ -5,176 +5,245 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>りぃーろんの事業所向けeスポーツカスタム</title>
     <style>
+        :root {
+            --neon-blue: #00f0ff;
+            --neon-purple: #c026d3;
+            --dark-bg: #0a0a0a;
+            --card-bg: #111827;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            margin: 40px auto;
-            max-width: 850px;
-            line-height: 1.8;
-            color: #333;
+            font-family: 'Arial', 'Helvetica Neue', sans-serif;
+            background: var(--dark-bg);
+            color: #e0f2fe;
+            line-height: 1.7;
+            padding: 40px 20px;
+            min-height: 100vh;
         }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* ネオンタイトル */
         h1 {
+            font-size: 3.2rem;
             text-align: center;
-            color: #1e3a8a;
-            border-bottom: 3px solid #3b82f6;
-            padding-bottom: 15px;
-        }
-        h2 {
-            color: #1e40af;
-            border-left: 6px solid #3b82f6;
-            padding-left: 15px;
-        }
-        section {
             margin-bottom: 50px;
+            color: #fff;
+            text-shadow: 
+                0 0 10px var(--neon-blue),
+                0 0 20px var(--neon-blue),
+                0 0 40px var(--neon-blue),
+                0 0 60px var(--neon-purple);
+            letter-spacing: 4px;
         }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--neon-blue);
+            margin-bottom: 25px;
+            text-shadow: 0 0 15px var(--neon-blue);
+            border-bottom: 2px solid rgba(0, 240, 255, 0.3);
+            padding-bottom: 10px;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 35px;
+            margin-bottom: 50px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 240, 255, 0.2);
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        section:hover {
+            box-shadow: 0 0 40px rgba(0, 240, 255, 0.3);
+            transform: translateY(-5px);
+        }
+
+        /* イベント概要リスト */
+        ul.event-list {
+            list-style: none;
+        }
+        ul.event-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 1.1em;
+        }
+        ul.event-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* ネオンボタン */
+        .button {
+            display: inline-block;
+            background: transparent;
+            color: white;
+            padding: 16px 32px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border: 2px solid var(--neon-blue);
+            border-radius: 8px;
+            text-decoration: none;
+            margin: 20px 0;
+            text-shadow: 0 0 10px var(--neon-blue);
+            box-shadow: 0 0 20px var(--neon-blue);
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            background: var(--neon-blue);
+            color: #000;
+            box-shadow: 0 0 40px var(--neon-blue);
+            transform: scale(1.05);
+        }
+
+        /* 動画コンテナ */
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             background: #000;
-            border-radius: 8px;
-            margin: 20px 0;
+            border-radius: 12px;
+            margin: 25px 0;
+            border: 2px solid rgba(0, 240, 255, 0.3);
         }
         .video-container iframe {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
         }
-        .button {
-            display: inline-block;
-            background-color: #3b82f6;
-            color: white;
-            padding: 15px 25px;
-            font-size: 1.1em;
-            border-radius: 8px;
-            text-decoration: none;
-            margin: 15px 0;
-        }
-        .button:hover {
-            background-color: #2563eb;
-        }
+
         .highlight {
-            font-size: 1.1em;
-            color: #1e3a8a;
+            font-size: 1.25em;
+            color: #67e8f9;
+            text-shadow: 0 0 15px #67e8f9;
         }
-        ul.event-list {
-            padding-left: 20px;
-        }
-        ul.event-list li {
-            margin-bottom: 12px;
-            font-size: 1.05em;
-        }
+
         .contact {
-            background: #f0f9ff;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-top: 15px;
+            background: rgba(16, 23, 42, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--neon-blue);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            color: #94a3b8;
+            font-size: 0.95em;
+        }
+
+        /* 軽いアニメーション */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeInUp 0.8s ease forwards;
         }
     </style>
 </head>
 <body>
 
-    <h1>りぃーろんの事業所向けeスポーツカスタム</h1>
+    <div class="container">
+        <h1>りぃーろんの事業所向け<br>eスポーツカスタム</h1>
 
-    <!-- 動機・理念 -->
-    <section>
-        <h2>このカスタムを始めた動機・理念</h2>
-        <p>初めまして、りぃーろんといいます。私自身発達障害（ADHD）のある当事者です。eスポーツ、特にApex Legendsが大好きです。</p>
-        
-        <p>全国のeスポーツ系のB型事業所、その他福祉事業所と連携し、事業所のカスタムを開かせていただいています。</p>
-        
-        <p>この活動は完全に私個人による活動であり、何らかの福祉事業所や団体やNPO法人ではありません。</p>
-        
-        <p>私自身がなぜこのような活動をしようと考えたかというと、私自身含め活躍の場を作りたかったからです。</p>
-        
-        <p>障がいや特性、病気を持っていても人は平等です。とは私は思いません。社会には確実に格差があり、健常者でも生きづらい世の中だと思います。せっかく能力や才能を持っているのにそれを発揮できるチャンスがない時があります。それはとてもとても悔しく、もったいないことだと思います。</p>
-        
-        <p>私の大会に参加していただいている方々は毎日eスポーツに励んでいると思います。しかしその力や可能性を発揮できる場所が中々ありません。私の大会ではみなさんの日々磨いている能力を存分に発揮していただけるような場を作りたいです。</p>
-        
-        <p>それは私一人では実現できません。なぜなら、みなさんが参加しなければ大会が成り立たないからです。みなさん一人ひとりが大会に参加することで活躍の場が形成され人を助けることにつながっています。これは当事者同士による自助だといえます。</p>
-        
-        <p>福祉や制度に頼ることも大切ですが、自分たちで行動して活躍の場を作っていくことも必要だと考えています。</p>
-        
-        <p class="highlight"><strong>「あなたは助けられているだけじゃない、大会に参加することで他の参加者を助けているんです。」</strong></p>
-    </section>
+        <!-- 動機・理念 -->
+        <section>
+            <h2>このカスタムを始めた動機・理念</h2>
+            <p>初めまして、りぃーろんといいます。私自身発達障害（ADHD）のある当事者です。eスポーツ、特にApex Legendsが大好きです。</p>
+            <p>全国のeスポーツ系のB型事業所、その他福祉事業所と連携し、事業所のカスタムを開かせていただいています。</p>
+            <p>この活動は完全に私個人による活動であり、何らかの福祉事業所や団体やNPO法人ではありません。</p>
+            <!-- （以下、以前と同じ文章をすべて入れる） -->
+            <p>私自身がなぜこのような活動をしようと考えたかというと、私自身含め活躍の場を作りたかったからです。</p>
+            <p>障がいや特性、病気を持っていても人は平等です。とは私は思いません。社会には確実に格差があり、健常者でも生きづらい世の中だと思います。せっかく能力や才能を持っているのにそれを発揮できるチャンスがない時があります。それはとてもとても悔しく、もったいないことだと思います。</p>
+            <p>私の大会に参加していただいている方々は毎日eスポーツに励んでいると思います。しかしその力や可能性を発揮できる場所が中々ありません。私の大会ではみなさんの日々磨いている能力を存分に発揮していただけるような場を作りたいです。</p>
+            <p>それは私一人では実現できません。なぜなら、みなさんが参加しなければ大会が成り立たないからです。みなさん一人ひとりが大会に参加することで活躍の場が形成され人を助けることにつながっています。これは当事者同士による自助だといえます。</p>
+            <p>福祉や制度に頼ることも大切ですが、自分たちで行動して活躍の場を作っていくことも必要だと考えています。</p>
+            <p class="highlight"><strong>「あなたは助けられているだけじゃない、大会に参加することで他の参加者を助けているんです。」</strong></p>
+        </section>
 
-    <!-- イベント概要 -->
-    <section>
-        <h2>イベント概要</h2>
-        <ul class="event-list">
-            <li><strong>タイトル</strong>：Apex Legends</li>
-            <li><strong>開催形式</strong>：オンライン開催（Discord内にて運営・進行）</li>
-            <li><strong>参加費</strong>：無料</li>
-            <li><strong>参加ルール</strong>：1事業所につき複数チーム参加可能</li>
-            <li><strong>対象者</strong>：就労継続支援B型事業所の利用者様および関係者様</li>
-            <li><strong>その他</strong>：当日参加が難しい場合も、事前登録・キャンセルが可能です</li>
-        </ul>
-    </section>
+        <!-- イベント概要 -->
+        <section>
+            <h2>イベント概要</h2>
+            <ul class="event-list">
+                <li><strong>タイトル</strong>：Apex Legends</li>
+                <li><strong>開催形式</strong>：オンライン開催（Discord内にて運営・進行）</li>
+                <li><strong>参加費</strong>：無料</li>
+                <li><strong>参加ルール</strong>：1事業所につき複数チーム参加可能</li>
+                <li><strong>対象者</strong>：就労継続支援B型事業所の利用者様および関係者様</li>
+                <li><strong>その他</strong>：当日参加が難しい場合も、事前登録・キャンセルが可能です</li>
+            </ul>
+        </section>
 
-    <!-- イベントの様子 -->
-    <section>
-        <h2>イベントの様子</h2>
-        
-        <h3>動画1</h3>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/SCjJF2THxJc" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen></iframe>
-        </div>
+        <!-- イベントの様子 -->
+        <section>
+            <h2>イベントの様子</h2>
+            <h3 style="color:#67e8f9; margin:20px 0 15px;">動画1</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/SCjJF2THxJc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
 
-        <h3>動画2</h3>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/en1vU2zJuq8" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen></iframe>
-        </div>
-    </section>
+            <h3 style="color:#67e8f9; margin:30px 0 15px;">動画2</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/en1vU2zJuq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
 
-    <!-- 次回開催日 -->
-    <section>
-        <h2>次回イベント開催日</h2>
-        <p><strong>2026年 ○月 ○日（○曜日）　○時〜</strong></p>
-        <p class="placeholder">（次回の日程が決まり次第ここを更新してください）</p>
-    </section>
+        <!-- 次回開催日 -->
+        <section>
+            <h2>次回イベント開催日</h2>
+            <p style="font-size:1.3em;"><strong>2026年 ○月 ○日（○曜日）　○時〜</strong></p>
+            <p>（次回の日程が決まり次第ここを更新してください）</p>
+        </section>
 
-    <!-- 参加方法 -->
-    <section>
-        <h2>参加方法</h2>
-        <ol>
-            <li>
-                <strong>下記のGoogleフォームよりご登録ください</strong><br><br>
-                <a href="https://forms.gle/wdxGrzzoih3UC7Ew5" target="_blank" class="button">
-                    → 参加申請フォームはこちら
-                </a>
-            </li>
-        </ol>
-        <p>※フォーム送信後、事業所担当者様に確認のご連絡をいたします。</p>
-    </section>
+        <!-- 参加方法 -->
+        <section>
+            <h2>参加方法</h2>
+            <ol style="margin-left:20px; font-size:1.1em;">
+                <li>
+                    <strong>下記のGoogleフォームよりご登録ください</strong><br><br>
+                    <a href="https://forms.gle/wdxGrzzoih3UC7Ew5" target="_blank" class="button">
+                        → 参加申請フォームはこちら
+                    </a>
+                </li>
+            </ol>
+            <p>※フォーム送信後、事業所担当者様に確認のご連絡をいたします。</p>
+        </section>
 
-    <!-- 応援・スポンサー募集 -->
-    <section>
-        <h2>スポンサー・クラウドファンディング・応援してくれる方募集</h2>
-        <p>この活動を継続・拡大していくために、ご支援いただける方を募集しています。</p>
-        <p>ご興味のある方は、下記までお気軽にご連絡ください。</p>
-        
-        <div class="contact">
-            <strong>連絡先メールアドレス</strong><br>
-            <a href="mailto:happywatdog@gmail.com">happywatdog@gmail.com</a>
-        </div>
-    </section>
+        <!-- 応援・スポンサー募集 -->
+        <section>
+            <h2>スポンサー・クラウドファンディング・応援してくれる方募集</h2>
+            <p>この活動を継続・拡大していくために、ご支援いただける方を募集しています。</p>
+            <p>ご興味のある方は、下記までお気軽にご連絡ください。</p>
+            
+            <div class="contact">
+                <strong>連絡先メールアドレス</strong><br>
+                <a href="mailto:happywatdog@gmail.com" style="color:var(--neon-blue); font-size:1.1em;">happywatdog@gmail.com</a>
+            </div>
+        </section>
+    </div>
 
-    <hr>
-    <footer style="text-align: center; margin-top: 60px; color: #666; font-size: 0.9em;">
+    <footer>
         <p>りぃーろん @apex</p>
-        <p><a href="https://x.com/apeXRiron" target="_blank">X（Twitter）</a></p>
+        <p><a href="https://x.com/apeXRiron" target="_blank" style="color:#67e8f9;">X（Twitter）</a></p>
     </footer>
 
 </body>
