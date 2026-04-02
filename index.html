@@ -23,7 +23,7 @@
             background: var(--dark-bg);
             color: #e0f2fe;
             line-height: 1.7;
-            padding: 40px 20px;
+            padding: 20px 15px;
             min-height: 100vh;
         }
 
@@ -34,22 +34,22 @@
 
         /* ネオンタイトル */
         h1 {
-            font-size: 3.2rem;
+            font-size: 2.8rem;
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             color: #fff;
             text-shadow: 
                 0 0 10px var(--neon-blue),
                 0 0 20px var(--neon-blue),
                 0 0 40px var(--neon-blue),
                 0 0 60px var(--neon-purple);
-            letter-spacing: 4px;
+            letter-spacing: 3px;
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: var(--neon-blue);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             text-shadow: 0 0 15px var(--neon-blue);
             border-bottom: 2px solid rgba(0, 240, 255, 0.3);
             padding-bottom: 10px;
@@ -57,8 +57,8 @@
 
         section {
             background: var(--card-bg);
-            padding: 35px;
-            margin-bottom: 50px;
+            padding: 30px 25px;
+            margin-bottom: 40px;
             border-radius: 12px;
             border: 1px solid rgba(0, 240, 255, 0.2);
             box-shadow: 0 0 25px rgba(0, 240, 255, 0.1);
@@ -77,7 +77,7 @@
         ul.event-list li {
             padding: 12px 0;
             border-bottom: 1px solid rgba(255,255,255,0.1);
-            font-size: 1.1em;
+            font-size: 1.05em;
         }
         ul.event-list li:last-child {
             border-bottom: none;
@@ -89,7 +89,7 @@
             background: transparent;
             color: white;
             padding: 16px 32px;
-            font-size: 1.2em;
+            font-size: 1.15em;
             font-weight: bold;
             border: 2px solid var(--neon-blue);
             border-radius: 8px;
@@ -98,12 +98,14 @@
             text-shadow: 0 0 10px var(--neon-blue);
             box-shadow: 0 0 20px var(--neon-blue);
             transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
         }
         .button:hover {
             background: var(--neon-blue);
             color: #000;
             box-shadow: 0 0 40px var(--neon-blue);
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
 
         /* 動画コンテナ */
@@ -114,7 +116,7 @@
             overflow: hidden;
             background: #000;
             border-radius: 12px;
-            margin: 25px 0;
+            margin: 20px 0;
             border: 2px solid rgba(0, 240, 255, 0.3);
         }
         .video-container iframe {
@@ -124,7 +126,7 @@
         }
 
         .highlight {
-            font-size: 1.25em;
+            font-size: 1.2em;
             color: #67e8f9;
             text-shadow: 0 0 15px #67e8f9;
         }
@@ -138,25 +140,45 @@
 
         footer {
             text-align: center;
-            margin-top: 80px;
+            margin-top: 60px;
             color: #94a3b8;
             font-size: 0.95em;
         }
 
         /* 軽いアニメーション */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-
         section {
             animation: fadeInUp 0.8s ease forwards;
+        }
+
+        /* ======================
+           レスポンシブ対応（Media Queries）
+           ====================== */
+
+        /* タブレット・小さいデスクトップ */
+        @media (min-width: 768px) {
+            body { padding: 40px 20px; }
+            h1 { font-size: 3.2rem; }
+            h2 { font-size: 2rem; }
+            section { padding: 35px; }
+            .button { width: auto; display: inline-block; }
+        }
+
+        /* 大きな画面 */
+        @media (min-width: 1024px) {
+            .container { max-width: 950px; }
+            h1 { font-size: 3.5rem; letter-spacing: 5px; }
+        }
+
+        /* スマホ（狭い画面）用調整 */
+        @media (max-width: 480px) {
+            h1 { font-size: 2.2rem; letter-spacing: 2px; }
+            h2 { font-size: 1.6rem; }
+            section { padding: 25px 18px; margin-bottom: 35px; }
+            .button { padding: 14px 20px; font-size: 1.1em; }
         }
     </style>
 </head>
@@ -171,7 +193,6 @@
             <p>初めまして、りぃーろんといいます。私自身発達障害（ADHD）のある当事者です。eスポーツ、特にApex Legendsが大好きです。</p>
             <p>全国のeスポーツ系のB型事業所、その他福祉事業所と連携し、事業所のカスタムを開かせていただいています。</p>
             <p>この活動は完全に私個人による活動であり、何らかの福祉事業所や団体やNPO法人ではありません。</p>
-            <!-- （以下、以前と同じ文章をすべて入れる） -->
             <p>私自身がなぜこのような活動をしようと考えたかというと、私自身含め活躍の場を作りたかったからです。</p>
             <p>障がいや特性、病気を持っていても人は平等です。とは私は思いません。社会には確実に格差があり、健常者でも生きづらい世の中だと思います。せっかく能力や才能を持っているのにそれを発揮できるチャンスがない時があります。それはとてもとても悔しく、もったいないことだと思います。</p>
             <p>私の大会に参加していただいている方々は毎日eスポーツに励んでいると思います。しかしその力や可能性を発揮できる場所が中々ありません。私の大会ではみなさんの日々磨いている能力を存分に発揮していただけるような場を作りたいです。</p>
@@ -210,14 +231,14 @@
         <!-- 次回開催日 -->
         <section>
             <h2>次回イベント開催日</h2>
-            <p style="font-size:1.3em;"><strong>2026年 ○月 ○日（○曜日）　○時〜</strong></p>
+            <p style="font-size:1.25em;"><strong>2026年 ○月 ○日（○曜日）　○時〜</strong></p>
             <p>（次回の日程が決まり次第ここを更新してください）</p>
         </section>
 
         <!-- 参加方法 -->
         <section>
             <h2>参加方法</h2>
-            <ol style="margin-left:20px; font-size:1.1em;">
+            <ol style="margin-left:20px; font-size:1.05em;">
                 <li>
                     <strong>下記のGoogleフォームよりご登録ください</strong><br><br>
                     <a href="https://forms.gle/wdxGrzzoih3UC7Ew5" target="_blank" class="button">
